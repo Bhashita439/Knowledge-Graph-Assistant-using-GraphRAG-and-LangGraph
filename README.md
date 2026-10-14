@@ -33,8 +33,8 @@ Before running the application, ensure you have the following:
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
-    cd <repository-folder>
+    git clone https://github.com/Bhashita439/Bhashita439-Knowledge-Graph-Assistant-using-GraphRAG-and-LangGraph.git
+    cd Bhashita439-Knowledge-Graph-Assistant-using-GraphRAG-and-LangGraph
     ```
 
 2.  **Install dependencies:**
@@ -85,6 +85,12 @@ Before running the application, ensure you have the following:
     - **Execute**: The query is run against the Neo4j database.
     - **Answer**: The results are formatted and synthesized into a final answer by the LLM.
 
+## 👤 Author
+
+- **GitHub**: [@Bhashita439](https://github.com/Bhashita439)
+- **Email**: [bhashitanalluri1438@gmail.com](mailto:bhashitanalluri1438@gmail.com)
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
