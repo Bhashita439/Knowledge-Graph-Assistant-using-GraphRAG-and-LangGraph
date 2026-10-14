@@ -1,6 +1,19 @@
-# Graphy: GraphRAG with LangGraph
+# Knowledge Graph Assistant using GraphRAG and LangGraph
 
-Graphy is a powerful Graph Retrieval-Augmented Generation (GraphRAG) application built with **LangGraph**, **Groq**, and **Neo4j**. It allows users to upload PDF documents, extract structured knowledge into a graph database, and perform complex queries using natural language.
+## 📖 Project Overview & Description
+
+**Knowledge Graph Assistant** is a Graph Retrieval-Augmented Generation (**GraphRAG**) application built with **LangGraph**, **Neo4j**, and **Groq**. 
+
+### Why GraphRAG?
+Traditional RAG systems rely solely on vector embeddings and similarity search, which often fail when questions require multi-hop reasoning or understanding complex relationships between entities across multiple documents. 
+
+This project solves that problem by turning unstructured documents (such as medical records, clinical notes, or technical reports) into an interconnected **Knowledge Graph**:
+- **Structured Knowledge Extraction**: Analyzes uploaded PDFs to automatically identify key entities (such as *Patients*, *Diseases*, *Medications*, *Symptoms*, and *Doctors*) and their relationships (e.g., *HAS_DISEASE*, *TAKES_MEDICATION*, *TREATED_BY*), storing them directly in a **Neo4j** graph database.
+- **Natural Language to Cypher Querying**: When you ask a question in plain English, the assistant inspects the database schema and uses a fast LLM (via **Groq**) to translate your question into a precise **Cypher query**.
+- **Stateful Agent Workflow with LangGraph**: Uses a stateful LangGraph pipeline (`generate_cypher` ➔ `execute_cypher` ➔ `format_result`) to manage query validation, execution against Neo4j, and synthesis of clear, context-aware natural language answers.
+- **Interactive UI**: Includes a responsive Streamlit interface that lets you configure database credentials, select LLM models (Llama 3.3, Llama 3.1, Mixtral, Gemma), upload documents, and chat with your data in real-time.
+
+---
 
 ## 🚀 Features
 
