@@ -1,0 +1,122 @@
+/* Modern Dark Theme Variables */
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #4f46e5;
+  --background-dark: #0f172a;
+  --surface-dark: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #818cf8;
+}
+
+/* Main App Styling */
+.stApp {
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+  background-color: var(--surface-dark);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Headers */
+h1,
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
+  color: var(--text-primary) !important;
+  font-weight: 700;
+}
+
+h1 {
+  background: linear-gradient(45deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 1rem;
+}
+
+/* Chat Messages */
+.stChatMessage {
+  background-color: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+}
+
+.stChatMessage:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  background-color: rgba(30, 41, 59, 0.8);
+}
+
+/* User Message Specifics */
+[data-testid="stChatMessage"][data-testid="user"] {
+  background-color: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Inputs */
+.stTextInput input {
+  background-color: var(--surface-dark);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.stTextInput input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Buttons */
+.stButton button {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.stButton button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+}
+
+/* File Uploader */
+[data-testid="stFileUploader"] {
+  background-color: rgba(30, 41, 59, 0.3);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* Status Messages */
+.stSuccess {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+.stError {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+/* Code Blocks */
+code {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-radius: 6px;
+}

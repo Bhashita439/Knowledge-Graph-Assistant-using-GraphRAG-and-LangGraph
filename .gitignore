@@ -1,0 +1,6 @@
+.env
+.mypy_cache/
+*.json
+*.pdf
+course/
+__pycache__
